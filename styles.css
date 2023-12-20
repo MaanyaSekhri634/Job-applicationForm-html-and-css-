@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:grey;
+}
+.container{
+    max-width: 900px;
+    margin:0 auto;
+}
+.apply_box{
+    background-color: white;
+    max-width:600px;
+    border-radius: 3%;
+    margin:0 auto;
+    margin-top: 50px;
+    padding: 15px;
+    box-shadow: 4px 3px 5px rgb(1,1,1,0.1);
+}
+.container h1{
+    font-size: 30px;
+}
+.form_container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 20px;
+    margin-top: 15px;
+}
+.form_entity{
+    display:flex;
+    flex-direction: column;
+}
+label{
+    font-size: 15px;
+}
+input,textarea,select{
+        padding:10px;
+        margin-top: 5px;
+        border:1px solid grey;
+        border-radius: 4px;
+        font-size: 15px;
+}
+input,textarea:focus{
+    outline-color: red;
+}
+.button-container{
+    display:flex;
+    justify-content: flex-end;
+    grid-column: 2/ span 1;
+}
+button{
+    background-color: rgb(181, 138, 138);
+    height:30px;
+    margin-top: 70px;
+    font-size: 20px;
+    padding:0px 10px;
+    border:transparent;
+    border-radius: 10px;
+    transition:0.2s ease;
+}
+button:hover{
+    background-color:rgb(228, 199, 199) ;
+    border:2px solid rgb(150, 105, 105);
+    transition:0.2s ease;
+    cursor:pointer;
+}
+.text_area_entity{
+    grid-column: 1/span 2;
+}
+.text_area_entity textarea{
+    width:100%;
+}
+@media (max-width: 768px) {
+    .form_container {
+        grid-template-columns: 1fr; /* Change to a single column layout on small screens */
+    }
+    
+    .text_area_entity {
+        grid-column: 1/span 1; /* Adjust text area layout on small screens */
+    }
+
+    .button-container {
+        grid-column: 1/span 1; /* Adjust button layout on small screens */
+        margin-top: 20px; /* Optional: Adjust top margin for better spacing */
+    }
+}
+
+
+
+
+
